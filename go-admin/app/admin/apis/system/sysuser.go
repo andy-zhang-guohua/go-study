@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 	"github.com/google/uuid"
+	"log"
 
 	"go-admin/app/admin/models"
 	"go-admin/common/global"
@@ -24,6 +25,9 @@ func GetSysUserList(c *gin.Context) {
 	var err error
 	var pageSize = 10
 	var pageIndex = 1
+
+	log.Println("获取用户列表");
+
 
 	size := c.Request.FormValue("pageSize")
 	if size != "" {
