@@ -1,0 +1,1 @@
+go-admin migrate -c config/settings.yml
